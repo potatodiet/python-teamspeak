@@ -11,4 +11,5 @@ script:
     - cd teamspeak3-server_linux-amd64
     - ./ts3server_linux_amd64
     - ./ts3server_startscript.sh start serveradmin_password=travis_test
+    - cd ../
     - python run_tests.py
