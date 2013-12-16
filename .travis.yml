@@ -6,7 +6,7 @@ python:
     - 3.3
     - pypy
 script:
-    - mount -t tmpfs tmpfs /dev/shm # http://forum.teamspeak.com/showthread.php/68827-Failed-to-register-local-accounting-service
+    - sudo mount -t tmpfs tmpfs /dev/shm # http://forum.teamspeak.com/showthread.php/68827-Failed-to-register-local-accounting-service
     - wget http://dl.4players.de/ts/releases/3.0.10.2/teamspeak3-server_linux-amd64-3.0.10.2.tar.gz
     - tar xzf teamspeak3-server_linux-amd64-3.0.10.2.tar.gz
     - cd teamspeak3-server_linux-amd64
