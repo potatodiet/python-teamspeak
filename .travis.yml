@@ -11,5 +11,6 @@ script:
     - tar xzf teamspeak3-server_linux-amd64-3.0.10.2.tar.gz
     - cd teamspeak3-server_linux-amd64
     - ./ts3server_startscript.sh start serveradmin_password=travis_test
+    - sleep 10
     - cd ../
     - python run_tests.py
