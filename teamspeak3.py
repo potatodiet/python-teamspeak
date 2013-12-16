@@ -10,7 +10,7 @@ class teamspeak3:
             self.sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             self.sock.connect((self.host, self.port))
 
-            if self.sock.recv(1024).decode('utf-8').strip() != 'TS3':
+            if self.sock.recv(4).decode('utf-8').strip() != 'TS3':
                 print('This connection is not responding as a TeamSpeak 3 server.')
                 return False
 
@@ -31,7 +31,7 @@ class teamspeak3:
 
         out += ' ' + options + '\n'
 
-        self.sock.send(out.encode('utf-8'))
+        self.sock.sendall(out.encode('utf-8'))
 
         while True:
             response += self.sock.recv(1024).decode('utf-8')
