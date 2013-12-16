@@ -10,7 +10,7 @@ script:
     - wget http://dl.4players.de/ts/releases/3.0.10.2/teamspeak3-server_linux-amd64-3.0.10.2.tar.gz
     - tar xzf teamspeak3-server_linux-amd64-3.0.10.2.tar.gz
     - cd teamspeak3-server_linux-amd64
-    - ./ts3server_linux_amd64
-    - ./ts3server_startscript.sh start serveradmin_password=travis_test
+    - ./ts3server_linux_amd64 &
+    - ./ts3server_startscript.sh start serveradmin_password=travis_test &
     - cd ../
     - python run_tests.py
