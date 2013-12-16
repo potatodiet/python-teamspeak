@@ -9,5 +9,4 @@ teamspeak.command('use', {'sid': '1'})
 
 teamspeak.command('hostinfo')
 
-time.sleep(5)
-teamspeak.command('exit')
+teamspeak.command('quit')

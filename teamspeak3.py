@@ -31,7 +31,7 @@ class teamspeak3:
 
         out += ' ' + options + '\n'
 
-        self.sock.send(out.encode('utf-8'))
+        self.sock.sendall(out.encode('utf-8'))
 
         while True:
             response += self.sock.recv(1024).decode('utf-8')
